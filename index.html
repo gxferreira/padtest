@@ -7,13 +7,16 @@
 	<div class="circleTouch">
 
 	</div>
+	<div class="gamepadLog">
+
+	</div>
 	<script type="text/javascript">
 		var svg = d3.select(".circleTouch").append("svg").attr("width","300").attr("height","300");
 
 		var wheelCircle = svg.append("circle").attr("r","150").attr("cx","150").attr("cy",150);
 
 		wheelCircle.on("touchstart", function(e){
-			console.log("Touched!");
+			d3.select(".gamepadLog").text(d3.select(".gamepadLog").text()+"Touched");
 		});
 	</script>
 </body>
