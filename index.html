@@ -13,10 +13,11 @@
 	<script type="text/javascript">
 		var svg = d3.select(".circleTouch").append("svg").attr("width","300").attr("height","300");
 
-		var wheelCircle = svg.append("circle").attr("r","150").attr("cx","150").attr("cy",150);
+		var wheelCircle = svg.append("circle").attr("transform","translate(0,100)").attr("r","150").attr("cx","150").attr("cy",150);
 
-		wheelCircle.on("touchstart", function(e){
+		wheelCircle.on("click", function(){
 			d3.select(".gamepadLog").text(d3.select(".gamepadLog").text()+"Touched");
+			console.log(d3.event.y);
 		});
 	</script>
 </body>
